@@ -1,0 +1,90 @@
+schema_version: 1
+snapshot_date: "2026-07-25"
+project_status: blocked_pending_identification_and_bench_validation
+flight_ready: false
+px4_baseline: "v1.17.0"
+
+components:
+  frame:
+    supplied_name: "Flywoo Lens 85"
+    normalized_name: "Flywoo FlyLens 85 frame"
+    identity_confidence: high
+    revision: unknown
+    quantity: 1
+    documented_mass_g: "25.5-27"
+    status: verify_revision_and_motor_mount
+  companion_computer:
+    supplied_name: "Raspberry Pi 8 GB"
+    normalized_name: null
+    candidates: ["Raspberry Pi 4 Model B 8 GB", "Raspberry Pi 5 8 GB"]
+    identity_confidence: low
+    quantity: 1
+    status: exact_model_required
+  camera_gimbal:
+    supplied_name: "Sky Droid C10 Pro gimbal"
+    normalized_name: "SkyDroid C10 Pro"
+    identity_confidence: low
+    quantity: 1
+    documented_mass_g: 61
+    status: dedicated_datasheet_and_connector_pinout_required
+  gnss_compass:
+    supplied_name: "Mico Air AG01"
+    normalized_name: "MicoAir MG-A01 (provisional match)"
+    identity_confidence: medium
+    quantity: 1
+    documented_mass_g: 12
+    status: label_confirmation_required
+  flight_controller_esc:
+    supplied_name: "Mico Air 35 A 743"
+    normalized_name: "MicoAir743-AIO-35A original revision (provisional match)"
+    identity_confidence: medium
+    quantity: 1
+    documented_mass_g: 10
+    px4_target: "micoair_h743-aio_default"
+    status: revision_confirmation_required
+  receiver:
+    supplied_name: "Zero Drag ELRS"
+    normalized_name: "Zerodrag Nexus1 2.4 GHz (provisional match)"
+    identity_confidence: medium
+    quantity: 1
+    documented_mass_g_including_antenna: 3.49
+    status: label_and_firmware_major_required
+  transmitter:
+    supplied_name: "RadioMaster Pocket"
+    normalized_name: null
+    candidates: ["RadioMaster Pocket ELRS", "RadioMaster Pocket CC2500 plus external ELRS module"]
+    identity_confidence: low
+    quantity: 1
+    status: rf_variant_and_regulatory_domain_required
+  motors:
+    supplied_name: "QPT 1404.5 4500 KV"
+    normalized_name: "Quanteon QPT 1404.5 KV4500"
+    identity_confidence: high
+    quantity: 4
+    documented_mass_each_g: 10
+    status: two_inch_propulsion_validation_required
+  optical_flow_range:
+    supplied_name: "Mico MTF01"
+    normalized_name: "MicoAir MTF-01"
+    identity_confidence: high
+    quantity: 1
+    documented_mass_g: 4.5
+    status: bench_configuration_required
+  battery:
+    supplied_name: "Lava LiHV 3S 450 mAh x2"
+    normalized_name: "BETAFPV LAVA 3S 450 mAh 75C"
+    identity_confidence: high
+    quantity: 2
+    documented_mass_each_g: 37.8
+    wiring_topology: unknown
+    status: use_one_pack_until_power_architecture_is_reviewed
+
+unresolved_required_items:
+  - exact_propeller_manufacturer_model_and_pitch
+  - dedicated_companion_computer_regulator
+  - verified_camera_power_regulator
+  - camera_video_and_control_transport
+  - exact_connectors_and_harness_pinouts
+  - companion_computer_mount_cooling_and_storage
+  - gnss_and_optical_flow_mounts
+  - vehicle_level_mass_cg_and_inertia_measurements
