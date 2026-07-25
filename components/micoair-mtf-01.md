@@ -1,6 +1,6 @@
 # MicoAir MTF-01 optical-flow and range sensor
 
-**Identity confidence:** high.
+**Sourced identity:** MicoAir MTF-01.
 
 ## Manufacturer specifications
 
@@ -20,20 +20,9 @@
 | Optical-flow speed | Up to 7 m/s at 1 m height |
 | Flow environmental guidance | More than 60 lux and more than 8 cm working distance |
 
-Range and flow performance depend strongly on surface reflectivity/texture, illumination, height, vibration, lens cleanliness, rotation, and motion. The headline limits are not guaranteed over all combinations.
+## PX4-related published data
 
-## PX4 v1.17 setup
-
-MicoAir's product page says PX4 1.14+ is supported and adds a PX4 1.17+ instruction to set `MAV_PROTO_VER=1`. Configure the sensor itself for `Mavlink_PX4` at 115200, allocate TELEM3, and follow [PX4 integration](../docs/px4-integration.md). Since `MAV_PROTO_VER` is global, test the companion link after changing it.
-
-Before enabling estimator fusion, confirm:
-
-- Range against traceable distances over representative light/surface conditions.
-- Optical-flow sign, rotation, scale, quality, and update rate using `vehicle_optical_flow`.
-- No clipping, vibration artifact, prop/landing-gear obstruction, or camera/gimbal interference.
-- Valid range/flow during Pi, ESC, lighting, and camera activity.
-
-Use range as the estimator height reference only for a tested low-altitude operating envelope. Optical flow is an aid, not a substitute for a complete failsafe and position-source strategy.
+MicoAir's product page states PX4 1.14+ support and includes a PX4 1.17+ instruction to set `MAV_PROTO_VER=1`. The sensor configuration options include `Mavlink_PX4` mode at 115200 baud.
 
 ## Primary sources
 

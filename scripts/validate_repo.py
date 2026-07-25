@@ -10,17 +10,10 @@ from urllib.parse import unquote
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED = [
+CORE_PATHS = [
     "README.md",
     "LICENSE",
     "hardware.yaml",
-    "docs/architecture.md",
-    "docs/compatibility.md",
-    "docs/interfaces-and-wiring.md",
-    "docs/power-and-mass-budget.md",
-    "docs/px4-integration.md",
-    "docs/bringup-and-test-plan.md",
-    "docs/open-questions.md",
     "references/README.md",
 ]
 LINK_RE = re.compile(r"!?(?:\[[^]]*\])\(([^)]+)\)")
@@ -29,10 +22,10 @@ LINK_RE = re.compile(r"!?(?:\[[^]]*\])\(([^)]+)\)")
 def main() -> int:
     errors: list[str] = []
 
-    for relative in REQUIRED:
+    for relative in CORE_PATHS:
         path = ROOT / relative
         if not path.is_file() or path.stat().st_size == 0:
-            errors.append(f"missing or empty required file: {relative}")
+            errors.append(f"missing or empty core file: {relative}")
 
     markdown_files = sorted(ROOT.rglob("*.md"))
     for source in markdown_files:
@@ -62,7 +55,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print(f"Validated {len(markdown_files)} Markdown files and {len(REQUIRED)} required paths.")
+    print(f"Validated {len(markdown_files)} Markdown files and {len(CORE_PATHS)} core paths.")
     return 0
 
 

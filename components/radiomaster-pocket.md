@@ -1,6 +1,6 @@
 # RadioMaster Pocket transmitter
 
-**Identity:** unresolved RF variant. RadioMaster sells Pocket versions with internal 2.4 GHz ExpressLRS or CC2500 multiprotocol hardware.
+**Sourced identity:** RadioMaster Pocket transmitter. RadioMaster sells Pocket versions with internal 2.4 GHz ExpressLRS or CC2500 multiprotocol hardware.
 
 ## Manufacturer specifications
 
@@ -18,14 +18,14 @@
 | Dimensions | 156.6 × 65.1 × 125.3 mm folded; 156.6 × 73.1 × 154.8 mm unfolded |
 | Mass | 288 g |
 
-## Compatibility decision
+## Variant data
 
-- **Pocket ELRS:** can bind directly to a compatible Nexus1 after matching the ExpressLRS major version, regulatory domain, and binding method.
-- **Pocket CC2500:** cannot directly transmit ExpressLRS. Fit a compatible 2.4 GHz ELRS nano module and configure EdgeTX to use the external module.
+| Variant | RF hardware |
+|---|---|
+| Pocket ELRS | Internal 2.4 GHz ExpressLRS |
+| Pocket CC2500 | Internal CC2500 multiprotocol radio and nano module bay |
 
-The manual recommends dynamic power and notes that packet rates no higher than 500 Hz help battery life and heat. Packet rate is an RF/control tradeoff; choose it from link testing and required control latency rather than the maximum available value.
-
-Create an EdgeTX model with deliberate channel order, arm/mode switches, output ranges, warnings, and a model-specific checklist. Validate every channel and failsafe in QGroundControl with propellers removed. SkyDroid states that third-party remote controllers cannot directly control its gimbals, so do not assign camera/gimbal channels until a documented companion/SDK adapter exists.
+The manual recommends dynamic power and notes that packet rates no higher than 500 Hz help battery life and heat.
 
 ## Primary sources
 

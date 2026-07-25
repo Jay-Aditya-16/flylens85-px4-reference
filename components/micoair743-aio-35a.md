@@ -1,6 +1,6 @@
 # MicoAir743-AIO-35A flight controller and ESC
 
-- **Provisional identity:** original/discontinued MicoAir743-AIO-35A, not V2. Confirm silkscreen before flashing or wiring.
+- **Sourced identity:** original/discontinued MicoAir743-AIO-35A
 - **PX4 target:** `micoair_h743-aio_default`
 
 ## Flight-controller specifications
@@ -18,7 +18,20 @@
 | Mass | 10 g |
 | PX4 support | Manufacturer states PX4 1.16.0 and later |
 
-UART mapping is captured in [interfaces and wiring](../docs/interfaces-and-wiring.md). UART2/TELEM2 shares the VTX-HD connector, whose pin 1 is marked 12 V by the vendor.
+## Published UART map
+
+| PX4 device | MCU UART | Manufacturer board function |
+|---|---:|---|
+| `ttyS0` / TELEM1 | UART1 | Telemetry |
+| `ttyS1` / TELEM2 | UART2 | Telemetry, shared with VTX-HD connector |
+| `ttyS2` / GPS1 | UART3 | GPS |
+| `ttyS3` / TELEM3 | UART4 | Telemetry |
+| `ttyS4` / RC | UART6 | Receiver |
+| `ttyS5` / ESC | UART7 | ESC |
+| `ttyS6` / TELEM4 | UART8 | Telemetry |
+| I2C1 | I2C | External I2C |
+
+The VTX-HD connector marks pin 1 as 12 V in the vendor diagram.
 
 ## Integrated ESC specifications
 
@@ -28,14 +41,16 @@ UART mapping is captured in [interfaces and wiring](../docs/interfaces-and-wirin
 | Continuous rating | 35 A × 4, vendor headline value |
 | Firmware/target | AM32; `AM32_MICOAIR_743_AIO_F421_2.17` listed by vendor |
 | PWM protocols | PWM, DShot300, DShot600 |
-| Bidirectional DShot | Hardware/vendor listing says supported, but vendor notes PX4/INAV do not currently support it in this workflow |
+| Bidirectional DShot | Hardware/vendor listing says supported; MicoAir's AM32 guide documents configuration through Betaflight or INAV |
 | Voltage/current scale factors | 21.12 / 14.14 |
 
-PX4 does not provide the vendor's AM32 passthrough workflow. MicoAir directs users to Betaflight or INAV for configuration. Back up settings and identify the ESC revision before any update.
+## Original and V2 product differences
 
-## V1 versus V2 warning
-
-The V2 product uses a different PX4 target, `micoair_h743-v2`, and lists different hardware such as an SPL06 barometer and Bluejay ESC firmware. Flashing or documenting one revision as the other can produce incorrect peripheral mappings or firmware. Photos of both PCB sides and the boot/USB identity are required.
+| Item | Original MicoAir743-AIO-35A | MicoAir743V2-AIO-35A |
+|---|---|---|
+| PX4 target | `micoair_h743-aio_default` | `micoair_h743-v2_default` |
+| Barometer | DPS310 | SPL06 |
+| ESC firmware family | AM32 | Bluejay, per V2 product page |
 
 ## Primary sources
 

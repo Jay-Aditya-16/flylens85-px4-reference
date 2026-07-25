@@ -1,8 +1,8 @@
 # Flywoo FlyLens 85 frame
 
 - **Supplied name:** Flywoo Lens 85
-- **Identity:** normalized to Flywoo FlyLens 85 with high confidence
-- **Revision:** unknown and mechanically important
+- **Sourced identity:** Flywoo FlyLens 85 frame
+- **Component class:** 85 mm, 2-inch ducted whoop-style frame
 
 ## Manufacturer specifications
 
@@ -17,21 +17,13 @@
 | Frame mass | 27 g for O3 version; 25.5 g for Vista version |
 | Motor-hole statement on current frame page | 6.6 mm, 1.4 mm hole |
 
-Flywoo's 2S kit is a useful reference configuration, not a limit or endorsement for this build: it uses 1003 14800 KV motors, 2015 two-blade props, 2S power, and is advertised below 100 g. The proposed system is substantially heavier and uses a different motor class.
+## Published frame references
 
-## Revision conflict
-
-The 2S kit change log says the V1.3 frame, dated 2024-04-10, added support for a 9 × 9 mm motor mounting pattern. The current frame-kit page presents a different 6.6 mm/1.4 mm statement. A QPT drawing cannot settle which frame revision is physically present. Measure the actual hole centers, hole diameters, base clearance, and allowable screw length before ordering fasteners or mounting motors.
-
-The manufacturer also sells battery mounts sized around 2S 550/750/1000 mAh packs and a nano-GPS mount. None establishes fit for a full-size Pi, C10 Pro, or this battery/layout.
-
-## Integration record
-
-- Confirm frame revision and variant.
-- Inspect carbon edges and guard damage before every test.
-- Check that the 36 × 36 mm AIO envelope does not interfere with ducts, USB-C access, or camera structure.
-- Produce a dimensioned CAD/mock-up for the Pi and C10 Pro; the stock camera ecosystem does not establish their fit.
-- Record motor fastener engagement without contact to windings.
+| Source item | Published data |
+|---|---|
+| FlyLens 85 2S kit reference configuration | 1003 14800 KV motors, 2015 two-blade propellers, 2S battery class |
+| V1.3 frame change log, dated 2024-04-10 | Adds support for 9 × 9 mm motor mounting pattern |
+| Frame-parts collection | Battery mount options for 2S 550/750/1000 mAh packs and a nano-GPS mount |
 
 ## Primary sources
 
