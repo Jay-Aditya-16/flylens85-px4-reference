@@ -1,5 +1,5 @@
 schema_version: 1
-snapshot_date: "2026-07-25"
+snapshot_date: "2026-07-26"
 repository_scope: hardware_technical_reference
 
 components:
@@ -50,6 +50,16 @@ components:
     normalized_name: "MicoAir MTF-01"
     quantity: 1
     documented_mass_g: 4.5
+  forward_edge_case_tof:
+    supplied_name: "Forward ToF imager"
+    normalized_name: "SmartElex ToF Imager - VL53L5CX"
+    quantity: 1
+    sensor_ic: "STMicroelectronics VL53L5CX"
+    role: "forward multi-zone ToF for transparent, reflective, and featureless obstacle detection"
+    status: "candidate_required_by_forward_tof_brief"
+    documented_mass_g: unknown
+    documented_range_m: 4
+    note: "Meets multi-zone/FOV/interface class, but published maximum range is below the 5 m target in 09_hw_req_forward_tof.md."
   battery:
     supplied_name: "Lava LiHV 3S 450 mAh x2"
     normalized_name: "BETAFPV LAVA 3S 450 mAh 75C"

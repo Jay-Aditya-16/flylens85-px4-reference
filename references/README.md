@@ -2,7 +2,7 @@
 
 This register is the entry point for upstream technical information. Vendor files are linked rather than copied so their copyright and update history remain with the publisher.
 
-- **Snapshot date:** 2026-07-25
+- **Snapshot date:** 2026-07-26
 - **Quality labels:** Primary = manufacturer, protocol owner, or upstream project. Secondary = unaffiliated mirror or reseller.
 
 ## Airframe and propulsion
@@ -37,6 +37,11 @@ This register is the entry point for upstream technical information. Vendor file
 | MTF-01 | [User-manual repository](https://github.com/micoair/MTF-01_USER_MANUAL) | Primary | Manufacturer's versioned manual source |
 | MTF-01 | [MicoAssistant](https://micoair.com/assistant/) | Primary | Browser configuration tool |
 | MTF-01 | [MicoLink decoder](https://micoair.com/docs/decoding-micolink-messages-from-mtf-01/) | Primary | Packet description/example |
+| SmartElex VL53L5CX | [Robu product page](https://robu.in/product/smartelex-tof-imager-vl53l5cx/) | Secondary | Reseller page supplied for forward edge-case ToF sensor |
+| SmartElex VL53L5CX | [Robu SmartElex brand listing](https://robu.in/brand/smartelex/) | Secondary | SKU, operating-voltage, address, frame-rate listing |
+| SmartElex VL53L5CX | [SmartElex module manual mirror](https://manuals.plus/m/4bbef5fc7654387c24c3a8923842859f49a98e3399c46040f8cb133383db5885) | Secondary | Board overview, power, I2C, firmware-load notes |
+| VL53L5CX | [ST product page](https://www.st.com/en/imaging-and-photonics-solutions/vl53l5cx) | Primary | Sensor IC range, zones, FoV, frame-rate, cover-glass data |
+| VL53L5CX | [ST user manual mirror](https://manuals.plus/m/b129e47f9c61b433dc1a1fc1c2dfb4b29421ed8b983e54fafc1dbda3d7415f8a) | Secondary | Ultra lite driver behavior and output data guidance |
 
 ## Command, control, camera, and companion
 

@@ -15,6 +15,7 @@ Source-linked technical specifications, datasheets, manuals, and product documen
 | RadioMaster Pocket | RadioMaster Pocket transmitter | [components/radiomaster-pocket.md](components/radiomaster-pocket.md) |
 | QPT 1404.5 4500 KV | Quanteon QPT 1404.5 KV4500 motor | [components/qpt-1404-5-4500kv.md](components/qpt-1404-5-4500kv.md) |
 | Mico MTF01 | MicoAir MTF-01 optical-flow/range sensor | [components/micoair-mtf-01.md](components/micoair-mtf-01.md) |
+| Forward ToF imager | SmartElex ToF Imager - VL53L5CX multi-zone ToF sensor | [components/smartelex-vl53l5cx-tof-imager.md](components/smartelex-vl53l5cx-tof-imager.md) |
 | Lava LiHV 3S 450 mAh x2 | BETAFPV LAVA 3S 450 mAh 75C battery, two packs | [components/betafpv-lava-3s-450mah.md](components/betafpv-lava-3s-450mah.md) |
 
 ## Repository map
@@ -25,6 +26,6 @@ Source-linked technical specifications, datasheets, manuals, and product documen
 
 ## Source Notes
 
-Vendor-hosted manuals, datasheets, drawings, product pages, and protocol references are linked rather than copied into this repository. The source snapshot date is **2026-07-25**.
+Vendor-hosted manuals, datasheets, drawings, product pages, and protocol references are linked rather than copied into this repository. The source snapshot date is **2026-07-26**.
 
 Original repository text and code are MIT-licensed. Linked manuals, drawings, trademarks, and product images remain the property of their respective owners.
